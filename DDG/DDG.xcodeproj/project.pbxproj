@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D3082B228B41370001F76F4 /* GrubSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3082B128B41370001F76F4 /* GrubSpot.swift */; };
+		4D3082B428B41456001F76F4 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3082B328B41456001F76F4 /* Profile.swift */; };
+		4D3082B628B41507001F76F4 /* LocationListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3082B528B41507001F76F4 /* LocationListViewCell.swift */; };
+		4D63D21E28D4FFB000725195 /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D63D21D28D4FFB000725195 /* LocationDetailView.swift */; };
 		4D9BE29528AF03AF008E1630 /* DDGApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9BE29428AF03AF008E1630 /* DDGApp.swift */; };
 		4D9BE29928AF03B0008E1630 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D9BE29828AF03B0008E1630 /* Assets.xcassets */; };
 		4D9BE29C28AF03B0008E1630 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D9BE29B28AF03B0008E1630 /* Preview Assets.xcassets */; };
@@ -40,6 +44,10 @@
 
 /* Begin PBXFileReference section */
 		4D16926D28AFEC75001B17CF /* DDG.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DDG.entitlements; sourceTree = "<group>"; };
+		4D3082B128B41370001F76F4 /* GrubSpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrubSpot.swift; sourceTree = "<group>"; };
+		4D3082B328B41456001F76F4 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		4D3082B528B41507001F76F4 /* LocationListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListViewCell.swift; sourceTree = "<group>"; };
+		4D63D21D28D4FFB000725195 /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 		4D9BE29128AF03AF008E1630 /* DDG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D9BE29428AF03AF008E1630 /* DDGApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGApp.swift; sourceTree = "<group>"; };
 		4D9BE29828AF03B0008E1630 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,6 +91,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D3082AC28B40CF3001F76F4 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				4DA95AF228B042BE00E883C5 /* AppTabView.swift */,
+				4DA95AF428B0437800E883C5 /* LocationMapView.swift */,
+				4DA95AF628B043C100E883C5 /* LocationListView.swift */,
+				4DA95AF828B043FB00E883C5 /* ProfileView.swift */,
+				4D3082B528B41507001F76F4 /* LocationListViewCell.swift */,
+				4D63D21D28D4FFB000725195 /* LocationDetailView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		4D3082AD28B40D00001F76F4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4D3082AE28B40D0D001F76F4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4D3082B128B41370001F76F4 /* GrubSpot.swift */,
+				4D3082B328B41456001F76F4 /* Profile.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4D3082AF28B40D17001F76F4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4DA95AF028B0422700E883C5 /* Color+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4D3082B028B40D2E001F76F4 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		4D9BE28828AF03AF008E1630 = {
 			isa = PBXGroup;
 			children = (
@@ -107,15 +159,15 @@
 		4D9BE29328AF03AF008E1630 /* DDG */ = {
 			isa = PBXGroup;
 			children = (
+				4D3082B028B40D2E001F76F4 /* Managers */,
+				4D3082AF28B40D17001F76F4 /* Extensions */,
+				4D3082AE28B40D0D001F76F4 /* Models */,
+				4D3082AD28B40D00001F76F4 /* Views */,
+				4D3082AC28B40CF3001F76F4 /* Screens */,
 				4D16926D28AFEC75001B17CF /* DDG.entitlements */,
 				4D9BE29428AF03AF008E1630 /* DDGApp.swift */,
 				4D9BE29828AF03B0008E1630 /* Assets.xcassets */,
 				4D9BE29A28AF03B0008E1630 /* Preview Content */,
-				4DA95AF028B0422700E883C5 /* Color+Ext.swift */,
-				4DA95AF228B042BE00E883C5 /* AppTabView.swift */,
-				4DA95AF428B0437800E883C5 /* LocationMapView.swift */,
-				4DA95AF628B043C100E883C5 /* LocationListView.swift */,
-				4DA95AF828B043FB00E883C5 /* ProfileView.swift */,
 			);
 			path = DDG;
 			sourceTree = "<group>";
@@ -284,11 +336,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D9BE29528AF03AF008E1630 /* DDGApp.swift in Sources */,
+				4D3082B428B41456001F76F4 /* Profile.swift in Sources */,
 				4DA95AF528B0437800E883C5 /* LocationMapView.swift in Sources */,
+				4D3082B228B41370001F76F4 /* GrubSpot.swift in Sources */,
 				4DA95AF728B043C100E883C5 /* LocationListView.swift in Sources */,
 				4DA95AF328B042BE00E883C5 /* AppTabView.swift in Sources */,
 				4DA95AF928B043FB00E883C5 /* ProfileView.swift in Sources */,
 				4DA95AF128B0422700E883C5 /* Color+Ext.swift in Sources */,
+				4D63D21E28D4FFB000725195 /* LocationDetailView.swift in Sources */,
+				4D3082B628B41507001F76F4 /* LocationListViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

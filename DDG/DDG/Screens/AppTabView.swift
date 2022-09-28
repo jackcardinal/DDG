@@ -14,10 +14,10 @@ struct AppTabView: View {
             LocationMapView()
                 .tabItem { Label("Map", systemImage: "map")}
             
-            LocationListView()
+            LocationDetailView()
                 .tabItem { Label("Locations", systemImage: "building")}
             
-            ProfileView()
+            ProfileView(grubSpot: MockData.sampleGrubspot)
                 .tabItem { Label("Profile", systemImage: "person")}
         }
         .accentColor(.brandPrimary)
