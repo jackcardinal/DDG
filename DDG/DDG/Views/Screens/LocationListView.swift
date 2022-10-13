@@ -17,12 +17,11 @@ struct LocationListView: View {
         ZStack {
             NavigationView {
                 List(grubSpots) { spot in
-                    LocationListViewCell(grubSpot: spot)
-                        .listRowSeparator(.hidden)
-                        .padding(.vertical, 8)
-                        .onTapGesture {
-                            print(spot.name)
-                        }
+                    NavigationLink(destination: LocationDetailView()) {
+                        LocationListViewCell(grubSpot: spot)
+                            .listRowSeparator(.hidden)
+                            .padding(.vertical, 8)
+                    }
                 }
                 .navigationTitle("Grub Spots")
                 .listStyle(.plain)

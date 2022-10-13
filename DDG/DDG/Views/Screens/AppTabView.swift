@@ -10,15 +10,16 @@ import SwiftUI
 struct AppTabView: View {
     var body: some View {
         TabView {
-        
             LocationMapView()
                 .tabItem { Label("Map", systemImage: "map")}
             
-            LocationDetailView()
+            LocationListView()
                 .tabItem { Label("Locations", systemImage: "building")}
             
-            ProfileView(grubSpot: MockData.sampleGrubspot)
-                .tabItem { Label("Profile", systemImage: "person")}
+            NavigationView {
+                ProfileView(profile: MockData.sampleProfile)
+            }
+            .tabItem { Label("Profile", systemImage: "person")}
         }
         .accentColor(.brandPrimary)
     }

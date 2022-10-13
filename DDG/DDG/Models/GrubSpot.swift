@@ -21,9 +21,9 @@ struct GrubSpot: Decodable, Identifiable {
 
 struct MockData {
     
-    static let sampleProfile = Profile (name: "Sample Name", imageURL: "default-avatar")
-    static let sampleProfile1 = Profile (name: "Sample Name", imageURL: "default-avatar")
-    static let sampleProfile2 = Profile (name: "Sample Name", imageURL: "default-avatar")
+    static let sampleProfile = Profile (firstName: "First", lastName: "Last", bio: "This is a sample bio", imageURL: "default-avatar")
+    static let sampleProfile1 = Profile (firstName: "First", lastName: "Last", bio: "This is a sample bio", imageURL: "default-avatar")
+    static let sampleProfile2 = Profile (firstName: "First", lastName: "Last", bio: "This is a sample bio", imageURL: "default-avatar")
 
     
     static let sampleGrubspot = GrubSpot(id: UUID(), name: "sampleGrubspot", latitude: 1.0, longitude: 1.0, imageURL: "burbank-terrace", checkIns: [sampleProfile, sampleProfile1, sampleProfile2])

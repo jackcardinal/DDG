@@ -18,11 +18,7 @@ struct LocationMapView: View {
             Map(coordinateRegion: $region)
                 .ignoresSafeArea()
             VStack {
-                Image("ddg-map-logo")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 70.0)
-                    .shadow(radius: 1.0)
+                LogoView().shadow(radius: 1.0)
                 Spacer()
             }
         }
@@ -37,3 +33,12 @@ struct LocationMapView_Previews: PreviewProvider {
 
 
 //34.1808° N, 118.3090° W
+
+struct LogoView: View {
+    var body: some View {
+        Image("ddg-map-logo")
+            .resizable()
+            .scaledToFit()
+            .frame(height: 70.0)
+    }
+}

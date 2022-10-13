@@ -9,6 +9,8 @@ import Foundation
 
 struct Profile: Codable, Identifiable {
     var id = UUID()
-    let name: String
+    let firstName: String
+    let lastName: String
+    let bio: String
     let imageURL: String
 }

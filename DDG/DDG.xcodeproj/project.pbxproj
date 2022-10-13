@@ -11,6 +11,10 @@
 		4D3082B428B41456001F76F4 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3082B328B41456001F76F4 /* Profile.swift */; };
 		4D3082B628B41507001F76F4 /* LocationListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3082B528B41507001F76F4 /* LocationListViewCell.swift */; };
 		4D63D21E28D4FFB000725195 /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D63D21D28D4FFB000725195 /* LocationDetailView.swift */; };
+		4D8F467628F765C8001A6B85 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F467528F765C8001A6B85 /* AvatarView.swift */; };
+		4D8F467928F799DB001A6B85 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F467828F799DB001A6B85 /* View+Ext.swift */; };
+		4D8F467B28F79A6D001A6B85 /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F467A28F79A6D001A6B85 /* CustomModifiers.swift */; };
+		4D8F467D28F7A1B2001A6B85 /* DDGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F467C28F7A1B2001A6B85 /* DDGButton.swift */; };
 		4D9BE29528AF03AF008E1630 /* DDGApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9BE29428AF03AF008E1630 /* DDGApp.swift */; };
 		4D9BE29928AF03B0008E1630 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D9BE29828AF03B0008E1630 /* Assets.xcassets */; };
 		4D9BE29C28AF03B0008E1630 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D9BE29B28AF03B0008E1630 /* Preview Assets.xcassets */; };
@@ -48,6 +52,10 @@
 		4D3082B328B41456001F76F4 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		4D3082B528B41507001F76F4 /* LocationListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListViewCell.swift; sourceTree = "<group>"; };
 		4D63D21D28D4FFB000725195 /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
+		4D8F467528F765C8001A6B85 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		4D8F467828F799DB001A6B85 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		4D8F467A28F79A6D001A6B85 /* CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
+		4D8F467C28F7A1B2001A6B85 /* DDGButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGButton.swift; sourceTree = "<group>"; };
 		4D9BE29128AF03AF008E1630 /* DDG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D9BE29428AF03AF008E1630 /* DDGApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGApp.swift; sourceTree = "<group>"; };
 		4D9BE29828AF03B0008E1630 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -98,7 +106,6 @@
 				4DA95AF428B0437800E883C5 /* LocationMapView.swift */,
 				4DA95AF628B043C100E883C5 /* LocationListView.swift */,
 				4DA95AF828B043FB00E883C5 /* ProfileView.swift */,
-				4D3082B528B41507001F76F4 /* LocationListViewCell.swift */,
 				4D63D21D28D4FFB000725195 /* LocationDetailView.swift */,
 			);
 			path = Screens;
@@ -107,6 +114,11 @@
 		4D3082AD28B40D00001F76F4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4D3082B528B41507001F76F4 /* LocationListViewCell.swift */,
+				4D3082AC28B40CF3001F76F4 /* Screens */,
+				4D8F467F28F7B6A7001A6B85 /* Buttons */,
+				4D8F467E28F7B692001A6B85 /* Cells */,
+				4D8F467528F765C8001A6B85 /* AvatarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -124,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				4DA95AF028B0422700E883C5 /* Color+Ext.swift */,
+				4D8F467828F799DB001A6B85 /* View+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -133,6 +146,29 @@
 			children = (
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		4D8F467728F794A9001A6B85 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4D8F467A28F79A6D001A6B85 /* CustomModifiers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		4D8F467E28F7B692001A6B85 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		4D8F467F28F7B6A7001A6B85 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				4D8F467C28F7A1B2001A6B85 /* DDGButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		4D9BE28828AF03AF008E1630 = {
@@ -159,11 +195,11 @@
 		4D9BE29328AF03AF008E1630 /* DDG */ = {
 			isa = PBXGroup;
 			children = (
-				4D3082B028B40D2E001F76F4 /* Managers */,
 				4D3082AF28B40D17001F76F4 /* Extensions */,
-				4D3082AE28B40D0D001F76F4 /* Models */,
 				4D3082AD28B40D00001F76F4 /* Views */,
-				4D3082AC28B40CF3001F76F4 /* Screens */,
+				4D8F467728F794A9001A6B85 /* Helpers */,
+				4D3082B028B40D2E001F76F4 /* Managers */,
+				4D3082AE28B40D0D001F76F4 /* Models */,
 				4D16926D28AFEC75001B17CF /* DDG.entitlements */,
 				4D9BE29428AF03AF008E1630 /* DDGApp.swift */,
 				4D9BE29828AF03B0008E1630 /* Assets.xcassets */,
@@ -339,12 +375,16 @@
 				4D3082B428B41456001F76F4 /* Profile.swift in Sources */,
 				4DA95AF528B0437800E883C5 /* LocationMapView.swift in Sources */,
 				4D3082B228B41370001F76F4 /* GrubSpot.swift in Sources */,
+				4D8F467628F765C8001A6B85 /* AvatarView.swift in Sources */,
 				4DA95AF728B043C100E883C5 /* LocationListView.swift in Sources */,
 				4DA95AF328B042BE00E883C5 /* AppTabView.swift in Sources */,
 				4DA95AF928B043FB00E883C5 /* ProfileView.swift in Sources */,
+				4D8F467B28F79A6D001A6B85 /* CustomModifiers.swift in Sources */,
+				4D8F467928F799DB001A6B85 /* View+Ext.swift in Sources */,
 				4DA95AF128B0422700E883C5 /* Color+Ext.swift in Sources */,
 				4D63D21E28D4FFB000725195 /* LocationDetailView.swift in Sources */,
 				4D3082B628B41507001F76F4 /* LocationListViewCell.swift in Sources */,
+				4D8F467D28F7A1B2001A6B85 /* DDGButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
