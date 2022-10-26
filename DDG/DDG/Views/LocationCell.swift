@@ -1,5 +1,5 @@
 //
-//  LocationListViewCell.swift
+//  LocationCell.swift
 //  DDG
 //
 //  Created by Jack Cardinal on 8/22/22.
@@ -8,21 +8,21 @@
 import SwiftUI
 
 
-struct LocationListViewCell: View {
+struct LocationCell: View {
     
-    let grubSpot: GrubSpot
+    let location: DDGLocation
 
     var body: some View {
         HStack {
             LocationImage()
             VStack(alignment: .leading) {
-                Text("Burbank Terrace")
+                Text(location.name)
                     .font(.title2)
                     .fontWeight(.semibold)
                     .lineLimit(1)
                     .padding(-2)
                 HStack {
-                    ForEach(MockData.sampleGrubspot.checkIns) { checkIn in
+                    ForEach(0..<4) { item in
                         AvatarView(size: 30.0)
                     }
                 }
@@ -33,9 +33,9 @@ struct LocationListViewCell: View {
     }
 }
 
-struct LocationListViewCell_Previews: PreviewProvider {
+struct LocationCell_Previews: PreviewProvider {
     static var previews: some View {
-        LocationListViewCell(grubSpot: MockData.sampleGrubspot)
+        LocationCell(location: DDGLocation(record: MockData.location))
     }
 }
 

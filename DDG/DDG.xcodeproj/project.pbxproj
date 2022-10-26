@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D2102D02908634F0037FF37 /* LocationMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2102CF2908634F0037FF37 /* LocationMapViewModel.swift */; };
+		4D2102D42908B2430037FF37 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2102D32908B2430037FF37 /* LocationManager.swift */; };
+		4D22A00028FE27CD00A43CE7 /* DDGLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D229FFF28FE27CD00A43CE7 /* DDGLocation.swift */; };
+		4D22A00228FEE96200A43CE7 /* DDGProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D22A00128FEE96200A43CE7 /* DDGProfile.swift */; };
+		4D22A00428FF009600A43CE7 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D22A00328FF009600A43CE7 /* MockData.swift */; };
+		4D22A00728FF27EA00A43CE7 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D22A00628FF27EA00A43CE7 /* CloudKitManager.swift */; };
+		4D22A00928FF29C300A43CE7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D22A00828FF29C300A43CE7 /* Constants.swift */; };
 		4D3082B228B41370001F76F4 /* GrubSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3082B128B41370001F76F4 /* GrubSpot.swift */; };
 		4D3082B428B41456001F76F4 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3082B328B41456001F76F4 /* Profile.swift */; };
-		4D3082B628B41507001F76F4 /* LocationListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3082B528B41507001F76F4 /* LocationListViewCell.swift */; };
+		4D3082B628B41507001F76F4 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3082B528B41507001F76F4 /* LocationCell.swift */; };
 		4D63D21E28D4FFB000725195 /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D63D21D28D4FFB000725195 /* LocationDetailView.swift */; };
 		4D8F467628F765C8001A6B85 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F467528F765C8001A6B85 /* AvatarView.swift */; };
 		4D8F467928F799DB001A6B85 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F467828F799DB001A6B85 /* View+Ext.swift */; };
@@ -27,6 +34,8 @@
 		4DA95AF528B0437800E883C5 /* LocationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA95AF428B0437800E883C5 /* LocationMapView.swift */; };
 		4DA95AF728B043C100E883C5 /* LocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA95AF628B043C100E883C5 /* LocationListView.swift */; };
 		4DA95AF928B043FB00E883C5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA95AF828B043FB00E883C5 /* ProfileView.swift */; };
+		4DE9A2D22902FE2A00EA9B7D /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE9A2D12902FE2A00EA9B7D /* AlertItem.swift */; };
+		4DE9A2D429030CA000EA9B7D /* APError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE9A2D329030CA000EA9B7D /* APError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,9 +57,16 @@
 
 /* Begin PBXFileReference section */
 		4D16926D28AFEC75001B17CF /* DDG.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DDG.entitlements; sourceTree = "<group>"; };
+		4D2102CF2908634F0037FF37 /* LocationMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapViewModel.swift; sourceTree = "<group>"; };
+		4D2102D32908B2430037FF37 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		4D229FFF28FE27CD00A43CE7 /* DDGLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGLocation.swift; sourceTree = "<group>"; };
+		4D22A00128FEE96200A43CE7 /* DDGProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGProfile.swift; sourceTree = "<group>"; };
+		4D22A00328FF009600A43CE7 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		4D22A00628FF27EA00A43CE7 /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
+		4D22A00828FF29C300A43CE7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = DDG/Utilities/Constants.swift; sourceTree = SOURCE_ROOT; };
 		4D3082B128B41370001F76F4 /* GrubSpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrubSpot.swift; sourceTree = "<group>"; };
 		4D3082B328B41456001F76F4 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		4D3082B528B41507001F76F4 /* LocationListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListViewCell.swift; sourceTree = "<group>"; };
+		4D3082B528B41507001F76F4 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		4D63D21D28D4FFB000725195 /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 		4D8F467528F765C8001A6B85 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		4D8F467828F799DB001A6B85 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
@@ -71,6 +87,8 @@
 		4DA95AF428B0437800E883C5 /* LocationMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapView.swift; sourceTree = "<group>"; };
 		4DA95AF628B043C100E883C5 /* LocationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListView.swift; sourceTree = "<group>"; };
 		4DA95AF828B043FB00E883C5 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		4DE9A2D12902FE2A00EA9B7D /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
+		4DE9A2D329030CA000EA9B7D /* APError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +117,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D22A00528FF27C400A43CE7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4DE9A2D02902FE0B00EA9B7D /* Alerts */,
+				4D3082B028B40D2E001F76F4 /* Managers */,
+				4D3082AF28B40D17001F76F4 /* Extensions */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		4D3082AC28B40CF3001F76F4 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				4DA95AF228B042BE00E883C5 /* AppTabView.swift */,
 				4DA95AF428B0437800E883C5 /* LocationMapView.swift */,
+				4D2102CF2908634F0037FF37 /* LocationMapViewModel.swift */,
 				4DA95AF628B043C100E883C5 /* LocationListView.swift */,
 				4DA95AF828B043FB00E883C5 /* ProfileView.swift */,
 				4D63D21D28D4FFB000725195 /* LocationDetailView.swift */,
@@ -114,7 +143,7 @@
 		4D3082AD28B40D00001F76F4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4D3082B528B41507001F76F4 /* LocationListViewCell.swift */,
+				4D3082B528B41507001F76F4 /* LocationCell.swift */,
 				4D3082AC28B40CF3001F76F4 /* Screens */,
 				4D8F467F28F7B6A7001A6B85 /* Buttons */,
 				4D8F467E28F7B692001A6B85 /* Cells */,
@@ -128,6 +157,9 @@
 			children = (
 				4D3082B128B41370001F76F4 /* GrubSpot.swift */,
 				4D3082B328B41456001F76F4 /* Profile.swift */,
+				4D229FFF28FE27CD00A43CE7 /* DDGLocation.swift */,
+				4D22A00128FEE96200A43CE7 /* DDGProfile.swift */,
+				4D22A00328FF009600A43CE7 /* MockData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -137,6 +169,7 @@
 			children = (
 				4DA95AF028B0422700E883C5 /* Color+Ext.swift */,
 				4D8F467828F799DB001A6B85 /* View+Ext.swift */,
+				4D22A00828FF29C300A43CE7 /* Constants.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -144,6 +177,8 @@
 		4D3082B028B40D2E001F76F4 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				4D22A00628FF27EA00A43CE7 /* CloudKitManager.swift */,
+				4D2102D32908B2430037FF37 /* LocationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -195,11 +230,10 @@
 		4D9BE29328AF03AF008E1630 /* DDG */ = {
 			isa = PBXGroup;
 			children = (
-				4D3082AF28B40D17001F76F4 /* Extensions */,
+				4D22A00528FF27C400A43CE7 /* Utilities */,
+				4D3082AE28B40D0D001F76F4 /* Models */,
 				4D3082AD28B40D00001F76F4 /* Views */,
 				4D8F467728F794A9001A6B85 /* Helpers */,
-				4D3082B028B40D2E001F76F4 /* Managers */,
-				4D3082AE28B40D0D001F76F4 /* Models */,
 				4D16926D28AFEC75001B17CF /* DDG.entitlements */,
 				4D9BE29428AF03AF008E1630 /* DDGApp.swift */,
 				4D9BE29828AF03B0008E1630 /* Assets.xcassets */,
@@ -239,6 +273,15 @@
 				4DA95AEE28B03D5F00E883C5 /* CloudKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4DE9A2D02902FE0B00EA9B7D /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				4DE9A2D12902FE2A00EA9B7D /* AlertItem.swift */,
+				4DE9A2D329030CA000EA9B7D /* APError.swift */,
+			);
+			path = Alerts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,19 +414,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D2102D02908634F0037FF37 /* LocationMapViewModel.swift in Sources */,
 				4D9BE29528AF03AF008E1630 /* DDGApp.swift in Sources */,
+				4D22A00928FF29C300A43CE7 /* Constants.swift in Sources */,
 				4D3082B428B41456001F76F4 /* Profile.swift in Sources */,
 				4DA95AF528B0437800E883C5 /* LocationMapView.swift in Sources */,
+				4DE9A2D429030CA000EA9B7D /* APError.swift in Sources */,
+				4D22A00428FF009600A43CE7 /* MockData.swift in Sources */,
+				4D2102D42908B2430037FF37 /* LocationManager.swift in Sources */,
 				4D3082B228B41370001F76F4 /* GrubSpot.swift in Sources */,
+				4D22A00028FE27CD00A43CE7 /* DDGLocation.swift in Sources */,
 				4D8F467628F765C8001A6B85 /* AvatarView.swift in Sources */,
 				4DA95AF728B043C100E883C5 /* LocationListView.swift in Sources */,
+				4D22A00728FF27EA00A43CE7 /* CloudKitManager.swift in Sources */,
 				4DA95AF328B042BE00E883C5 /* AppTabView.swift in Sources */,
 				4DA95AF928B043FB00E883C5 /* ProfileView.swift in Sources */,
 				4D8F467B28F79A6D001A6B85 /* CustomModifiers.swift in Sources */,
 				4D8F467928F799DB001A6B85 /* View+Ext.swift in Sources */,
+				4D22A00228FEE96200A43CE7 /* DDGProfile.swift in Sources */,
 				4DA95AF128B0422700E883C5 /* Color+Ext.swift in Sources */,
 				4D63D21E28D4FFB000725195 /* LocationDetailView.swift in Sources */,
-				4D3082B628B41507001F76F4 /* LocationListViewCell.swift in Sources */,
+				4D3082B628B41507001F76F4 /* LocationCell.swift in Sources */,
+				4DE9A2D22902FE2A00EA9B7D /* AlertItem.swift in Sources */,
 				4D8F467D28F7A1B2001A6B85 /* DDGButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

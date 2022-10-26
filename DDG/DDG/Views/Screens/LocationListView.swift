@@ -10,15 +10,15 @@ import SwiftUI
 
 struct LocationListView: View {
     
-    let grubSpots = MockData.grubSpots
+    @State private var locations: [DDGLocation] = [DDGLocation(record: MockData.location)]
     
     var body: some View {
         
         ZStack {
             NavigationView {
-                List(grubSpots) { spot in
-                    NavigationLink(destination: LocationDetailView()) {
-                        LocationListViewCell(grubSpot: spot)
+                List(locations, id: \.ckRecordID) { location in
+                    NavigationLink(destination: LocationDetailView(location: location)) {
+                        LocationCell(location: location)
                             .listRowSeparator(.hidden)
                             .padding(.vertical, 8)
                     }

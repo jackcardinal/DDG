@@ -19,7 +19,7 @@ struct GrubSpot: Decodable, Identifiable {
 }
 
 
-struct MockData {
+struct MockGrubSpotData {
     
     static let sampleProfile = Profile (firstName: "First", lastName: "Last", bio: "This is a sample bio", imageURL: "default-avatar")
     static let sampleProfile1 = Profile (firstName: "First", lastName: "Last", bio: "This is a sample bio", imageURL: "default-avatar")

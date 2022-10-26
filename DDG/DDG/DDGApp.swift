@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct DDGApp: App {
+    
+    var locationManager = LocationManager()
+
     var body: some Scene {
         WindowGroup {
-            AppTabView()
+            AppTabView().environmentObject(locationManager)
         }
     }
 }

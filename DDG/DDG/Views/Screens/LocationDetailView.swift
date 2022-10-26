@@ -9,24 +9,24 @@ import SwiftUI
 
 struct LocationDetailView: View {
     
+    var location: DDGLocation
+    
     var buttons = ["location","webURL", "phone", "contact"]
     let btnImage = ["location.fill", "network", "phone.fill", "person.fill.xmark"]
     //    let btnColumns: [GridItem] = [GridItem(.fixed(90)), GridItem(.fixed(90)), GridItem(.fixed(90)), GridItem(.fixed(90))]
     let avatarColumns: [GridItem] = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
-    
-    let bio = "This is a very long bio that probably needs to be checked so that it isn't too long."
-    
+        
     var body: some View {
         VStack (spacing: 16) {
             BannerImageView(imageName: "default-banner-asset")
             HStack {
-                Label("Address of location", systemImage: "mappin.and.ellipse")
+                Label(location.address, systemImage: "mappin.and.ellipse")
                     .font(.caption)
                     .foregroundColor(.secondary)
                     .padding(.leading)
                 Spacer()
             }
-            BioTextView(bioText: "This is a big bio, and this is a big bio, and this is a big bio, and this is a big bio, and this is a big bio, and this is a big bio, and this is a big bio.")
+            BioTextView(bioText: location.description)
             ZStack {
                 Capsule()
                     .frame(height: 80, alignment: .center)
@@ -44,7 +44,7 @@ struct LocationDetailView: View {
                         LocationActionButton(color: .brandPrimary, imageName: btnImage[1])
                     }
                     
-                    Link(destination: URL(string: "https://www.apple.com")!, label: {
+                    Link(destination: URL(string: location.websiteURL)!, label: {
                         LocationActionButton(color: .brandPrimary, imageName: btnImage[2])
                     })
                     
@@ -109,7 +109,7 @@ struct LocationDetailView: View {
             }
             Spacer()
         }
-        .navigationTitle("Location Name")
+        .navigationTitle(location.name)
         .navigationBarTitleDisplayMode(.inline)
     }
     
@@ -117,7 +117,7 @@ struct LocationDetailView: View {
 
 struct LocationDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        LocationDetailView()
+        LocationDetailView(location: DDGLocation(record: MockData.location))
     }
 }
 

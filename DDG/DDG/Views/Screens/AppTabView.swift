@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AppTabView: View {
+        
     var body: some View {
         TabView {
             LocationMapView()
@@ -17,7 +18,7 @@ struct AppTabView: View {
                 .tabItem { Label("Locations", systemImage: "building")}
             
             NavigationView {
-                ProfileView(profile: MockData.sampleProfile)
+                ProfileView(profile: MockGrubSpotData.sampleProfile)
             }
             .tabItem { Label("Profile", systemImage: "person")}
         }
