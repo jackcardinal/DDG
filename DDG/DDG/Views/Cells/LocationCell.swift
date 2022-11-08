@@ -14,19 +14,19 @@ struct LocationCell: View {
 
     var body: some View {
         HStack {
-            LocationImage()
+            LocationImage(image: location.createSquareImage())
             VStack(alignment: .leading) {
                 Text(location.name)
                     .font(.title2)
                     .fontWeight(.semibold)
                     .lineLimit(1)
                     .padding(-2)
+                    .minimumScaleFactor(0.75)
                 HStack {
                     ForEach(0..<4) { item in
                         AvatarView(size: 30.0)
                     }
                 }
-                
             }
             .padding(.leading, 5)
         }
@@ -40,8 +40,9 @@ struct LocationCell_Previews: PreviewProvider {
 }
 
 struct LocationImage: View {
+    let image: UIImage
     var body: some View {
-        Image("burbank-terrace")
+        Image(uiImage: image)
             .resizable()
             .scaledToFit()
             .frame(width: 80)

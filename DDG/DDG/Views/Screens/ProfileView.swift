@@ -85,15 +85,6 @@ struct ProfileView_Previews: PreviewProvider {
 }
 
 
-struct StandardButtonStyle: ViewModifier {
-    
-    func body(content: Content) -> some View {
-        content
-            .buttonStyle(.bordered)
-            .tint(.brandPrimary)
-            .controlSize(.small)
-    }
-}
 
 struct EditImage: View {
     var body: some View {

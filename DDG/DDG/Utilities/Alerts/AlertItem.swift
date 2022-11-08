@@ -30,4 +30,18 @@ struct AlertContext {
     static let genericError =   AlertItem(title: Text("Error"),
                                               message: Text("Please check your internet connection or try again later."),
                                               dismissButton: .default(Text("Okay")))
+    
+    //MARK: - Location Services Errors
+    
+    static let locationRestricted =   AlertItem(title: Text("Error"),
+                                              message: Text("Your location is restricted. Please check Privacy Settings/Location."),
+                                              dismissButton: .default(Text("Okay")))
+    
+    static let locationDenied =   AlertItem(title: Text("Error"),
+                                              message: Text("Location was denied for this app. Please check Privacy Settings/Location."),
+                                              dismissButton: .default(Text("Okay")))
+    
+    static let locationDisable =   AlertItem(title: Text("Error"),
+                                              message: Text("Location Services is disabled on this device for this app. Please check Privacy Settings"),
+                                              dismissButton: .default(Text("Okay")))
 }

@@ -10,17 +10,16 @@ import SwiftUI
 
 struct LocationListView: View {
     
-    @State private var locations: [DDGLocation] = [DDGLocation(record: MockData.location)]
+    @EnvironmentObject private var locationManager: LocationManager
     
     var body: some View {
         
         ZStack {
             NavigationView {
-                List(locations, id: \.ckRecordID) { location in
+                List(locationManager.locations) { location in
                     NavigationLink(destination: LocationDetailView(location: location)) {
                         LocationCell(location: location)
-                            .listRowSeparator(.hidden)
-                            .padding(.vertical, 8)
+ 
                     }
                 }
                 .navigationTitle("Grub Spots")
@@ -33,6 +32,6 @@ struct LocationListView: View {
 
 struct LocationListView_Previews: PreviewProvider {
     static var previews: some View {
-        LocationListView()
+        LocationListView().environmentObject(LocationManager())
     }
 }

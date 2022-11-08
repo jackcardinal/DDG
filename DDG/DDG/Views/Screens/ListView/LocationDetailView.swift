@@ -16,9 +16,10 @@ struct LocationDetailView: View {
     //    let btnColumns: [GridItem] = [GridItem(.fixed(90)), GridItem(.fixed(90)), GridItem(.fixed(90)), GridItem(.fixed(90))]
     let avatarColumns: [GridItem] = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
         
-    var body: some View {
+    var body: some View { 
         VStack (spacing: 16) {
-            BannerImageView(imageName: "default-banner-asset")
+            
+            BannerImageView(image: location.createBannerImage())
             HStack {
                 Label(location.address, systemImage: "mappin.and.ellipse")
                     .font(.caption)
@@ -152,9 +153,9 @@ struct FirstNameAvatarView: View {
 
 
 struct BannerImageView: View {
-    var imageName: String
+    var image: UIImage
     var body: some View {
-        Image(imageName)
+        Image(uiImage: image)
             .resizable()
             .scaledToFill()
             .frame(height: 120)
