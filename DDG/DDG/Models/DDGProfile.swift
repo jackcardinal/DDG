@@ -6,6 +6,7 @@
 //
 
 import CloudKit
+import UIKit
 
 struct DDGProfile {
     
@@ -35,7 +36,8 @@ struct DDGProfile {
         lastName        = record[DDGProfile.kLastName] as? String ?? "N/A"
     }
     
-    
-    
-    
+    func createAvatarImage() -> UIImage {
+        guard let avatar = avatar else { return PlaceholderImage.avatar }
+        return avatar.convertToUIImage(in: .square)
+    }
 }

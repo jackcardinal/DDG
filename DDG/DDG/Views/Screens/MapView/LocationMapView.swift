@@ -12,7 +12,6 @@ import MapKit
 struct LocationMapView: View {
     @EnvironmentObject private var locationManager: LocationManager
     @StateObject private var viewModel = LocationMapViewModel()
-    @State var isNotRegistered = true
     
     var body: some View {
         ZStack {
@@ -23,13 +22,13 @@ struct LocationMapView: View {
             .accentColor(.grubRed)
             .ignoresSafeArea()
             VStack {
-                LogoView().shadow(radius: 1.0)
+                LogoView(width: 70).shadow(radius: 1.0)
                 Spacer()
             }
         }
-        .sheet(isPresented: $isNotRegistered, content: {
-            OnboardView()
-        })
+        .sheet(isPresented: $viewModel.isShowingOnBoardView, onDismiss: viewModel.checkInLocationServicesIsEnabled) {
+            OnboardView(isShowingOnBoardView: $viewModel.isShowingOnBoardView)
+    }
         .alert(item: $viewModel.alertItem, content: { alertItem in
             Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissButton)
         })
@@ -37,7 +36,7 @@ struct LocationMapView: View {
         
         .onAppear {
             //like onViewDidLoad
-            viewModel.checkInLocationServicesIsEnabled()
+            viewModel.runStartupChecks()
             if locationManager.locations.isEmpty {
                 viewModel.getLocations(for: locationManager)
             }
@@ -50,33 +49,17 @@ struct LocationMapView: View {
     }
 }
 
-//private func checkRegistration() -> Bool {
-//    
-//   // open func bool(forKey defaultName: String) -> Bool
-//    
-//    if UserDefaults.bool(forKey, defaultName: "kReg") != nil {
-//        
-//    }
-//    
-//    guard (UserDefaults.bool(forKey defaultName: "kReg") != nil) else {
-//        return false
-//    }
-//    return true
-//}
+private func checkRegistration() -> Bool {
+    
+    return true
+}
 struct LocationMapView_Previews: PreviewProvider {
     static var previews: some View {
-        LocationMapView()
+        LocationMapView().environmentObject(LocationManager())
     }
 }
 
 
 //34.1808° N, 118.3090° W
 
-struct LogoView: View {
-    var body: some View {
-        Image("ddg-map-logo")
-            .resizable()
-            .scaledToFit()
-            .frame(height: 70.0)
-    }
-}
+

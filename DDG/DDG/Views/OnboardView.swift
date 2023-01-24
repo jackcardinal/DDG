@@ -8,107 +8,87 @@
 import SwiftUI
 
 struct OnboardView: View {
+    
+    @Binding var isShowingOnBoardView: Bool
+
     var body: some View {
-        ZStack {
-            LinearGradient(colors: [.gray,.black], startPoint: .topLeading, endPoint: .bottomTrailing)
-                .ignoresSafeArea()
+
             VStack(spacing: 30) {
                 HStack {
                     Spacer()
                     
                     Button {
-                        
+                        isShowingOnBoardView = false
                     } label: {
-                        Text("X")
-                            .foregroundColor(.white)
-                            .frame(width: 30, height: 30)
-                            .background {
-                                Circle()
-                                    .foregroundColor(.brandPrimary)
-                            }
+                        XDismissButton()
                     }
                     .padding([.top, .trailing], 15)
                 }
                 Spacer()
-                Image("ddg-map-logo")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(minWidth: 250, idealWidth: 250, maxWidth: 250)
+
+                
+                LogoView(width: 250).shadow(radius: 1.0)
+
+                
                 
                 VStack (alignment: .leading, spacing: 20) {
                     Button {
                         
                     } label: {
-                        HStack (spacing: 20){
-                            Image(systemName: "building.2.crop.circle")
-                                .resizable()
-                                .scaledToFill()
-                                .foregroundColor(.brandPrimary)
-                                .frame(width: 60, height: 22)
-                            VStack(alignment: .leading) {
-                                Text("Restaurant Locations")
-                                    .foregroundColor(.white)
-                                    .font(.title3)
-                                Text("Find places around the \nconvention center")
-                                    .multilineTextAlignment(.leading)
-                                    .lineLimit(2)
-                                    .foregroundColor(.gray)
-                                    .font(.caption)
-                            }
-                        }
+                        OnboardInfoView(imageName: "building.2.crop.circle",
+                                        title: "Restaurant Locations",
+                                        info: "Find places around the convention center")
                     }
                     Button {
                         
                     } label: {
-                        HStack (spacing: 20){
-                            Image(systemName: "checkmark.circle")
-                                .resizable()
-                                .scaledToFill()
-                                .foregroundColor(.brandPrimary)
-                                .frame(width: 60, height: 22)
-                            VStack(alignment: .leading) {
-                                Text("Restaurant Locations")
-                                    .foregroundColor(.white)
-                                    .font(.title3)
-                                Text("Find places around the \nconvention center")
-                                    .lineLimit(2)
-                                    .multilineTextAlignment(.leading)
-                                    .foregroundColor(.gray)
-                                    .font(.caption)
-                            }
-                        }
+                        OnboardInfoView(imageName: "checkmark.circle",
+                                        title: "Check In",
+                                        info: "Lets others know where you are")
                     }
                     Button {
                         
                     } label: {
-                        HStack (spacing: 20){
-                            Image(systemName: "person.2.circle")
-                                .resizable()
-                                .scaledToFill()
-                                .foregroundColor(.brandPrimary)
-                                .frame(width: 60, height: 22)
-                            VStack(alignment: .leading) {
-                                Text("Restaurant Locations")
-                                    .foregroundColor(.white)
-                                    .font(.title3)
-                                Text("Find places around the \nconvention center")
-                                    .lineLimit(2)
-                                    .multilineTextAlignment(.leading)
-                                    .foregroundColor(.gray)
-                                    .font(.caption)
-                            }
-                        }
+                        OnboardInfoView(imageName: "person.2.circle",
+                                        title: "Find Friends",
+                                        info: "See where friends are and join in the fun")
                     }
                 }
+                .padding(.horizontal, 40)
                 Spacer()
             }
-        }
-        
     }
 }
 
 struct OnboardView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardView()
+        OnboardView(isShowingOnBoardView: .constant(false))
     }
 }
+
+struct OnboardInfoView: View {
+    
+    var imageName: String
+    var title: String
+    var info: String
+    
+    var body: some View {
+        HStack (spacing: 20){
+            Image(systemName: imageName)
+                .resizable()
+                .scaledToFill()
+                .foregroundColor(.brandPrimary)
+                .frame(width: 60, height: 60)
+            VStack(alignment: .leading) {
+                Text(title).bold()
+                    .foregroundColor(.secondary)
+                Text(info)
+                    .multilineTextAlignment(.leading)
+                    .lineLimit(2)
+                    .foregroundColor(.gray)
+            }
+        }
+    }
+}
+
+

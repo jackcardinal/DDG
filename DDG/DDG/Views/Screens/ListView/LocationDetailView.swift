@@ -103,7 +103,7 @@ struct LocationDetailView: View {
                 
                 LazyVGrid(columns: avatarColumns) {
                     ForEach((0...7), id: \.self) { num in
-                        FirstNameAvatarView(firstName: "profile \(num)")
+                        FirstNameAvatarView(image: PlaceholderImage.avatar, firstName: "profile \(num)")
                         
                     }
                 }
@@ -140,10 +140,11 @@ struct LocationActionButton: View {
 }
 
 struct FirstNameAvatarView: View {
+    var image: UIImage
     var firstName: String
     var body: some View {
         VStack {
-            AvatarView(size: 64)
+            AvatarView(image: image, size: 64)
             Text(firstName)
                 .bold()
                 .lineLimit(1)

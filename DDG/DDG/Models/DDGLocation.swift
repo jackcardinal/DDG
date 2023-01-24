@@ -53,7 +53,6 @@ struct DDGLocation: Identifiable {
         guard let asset = bannerAsset else { return PlaceholderImage.banner }
         return asset.convertToUIImage(in: .banner)
     }
-    
 }
 
 //34.134026, -118.288345
